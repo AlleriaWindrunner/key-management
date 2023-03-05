@@ -1,21 +1,16 @@
-# key-management
+package io.github.alleriawindrunner;
 
-> Implementation of the java version of the shamir key sharing algorithm.
+import io.github.alleriawindrunner.service.PkeyShardingService;
+import io.github.alleriawindrunner.utils.KeyPresenter;
+import org.junit.Assert;
+import org.junit.Test;
 
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
-## Add to your project
+import static java.lang.Byte.toUnsignedInt;
 
-```java
-<dependency>
-  <groupId>io.github.alleriawindrunner</groupId>
-  <artifactId>key-management</artifactId>
-  <version>1.0.0</version>
-</dependency>
-```
-
-## Use the thing
-
-```java
 /**
  * 密钥分片测试
  * @author eleven
@@ -44,4 +39,3 @@ public class ShardingTest {
         Assert.assertTrue(privateKeyBeforeSharding.equals(privateKeyAfterRecovered));
     }
 }
-```
